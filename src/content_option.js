@@ -152,7 +152,7 @@ const contactConfig = {
     description: "",
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "service_id",
+    YOUR_SERVICE_ID: "service_hkxi1kp",
     YOUR_TEMPLATE_ID: "template_id",
     YOUR_USER_ID: "user_id",
 };
@@ -160,6 +160,7 @@ const contactConfig = {
 const socialprofils = {
     github: "https://github.com/pablogiroud",
     facebook: "https://facebook.com/pablogiroud",
+    instagram: "https://www.instagram.com/pablogiroud/",
     linkedin: "https://www.linkedin.com/in/pablogiroud/",
     twitter: "https://twitter.com/pablogiroud",
 };
