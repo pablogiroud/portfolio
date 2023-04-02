@@ -1,75 +1,86 @@
-const logotext = "JOHN";
+const logotext = "Pablo";
 const meta = {
-    title: "John Doe",
-    description: "I’m John Doe data scientist _ Full stack devloper,currently working in Berlin",
+    title: "Pablo Giroud",
+    description: "I’m Pablo Giroud _ Full stack devloper, currently working in SOVOS as Senior QA Automation",
 };
 
 const introdata = {
-    title: "I’m John Doe",
+    title: "I’m Pablo Giroud",
     animated: {
         first: "I love coding",
-        second: "I code cool websites",
-        third: "I develop mobile apps",
+        second: "I'm Full stack developer",
+        third: "and senior QA Automation",
     },
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum",
+    description: "Senior QA Automation at SOVOS",
     your_img_url: "https://images.unsplash.com/photo-1514790193030-c89d266d5a9d",
 };
 
 const dataabout = {
-    title: "abit about my self",
-    aboutme: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis dolor id ligula semper elementum feugiat pretium nulla. Nunc non commodo dolor. Nunc mollis dignissim facilisis. Morbi ut magna ultricies.",
+    title: "a bit about my self",
+    aboutme: "Nature & music and pets lover. Coding for fun, working with passion.",
 };
 const worktimeline = [{
-        jobtitle: "Designer of week",
-        where: "YAdfi",
-        date: "2020",
+        jobtitle: "Full Stack Developer",
+        where: "Tucuman, Arg.",
+        date: "2023",
     },
     {
-        jobtitle: "Designer of week",
-        where: "Jamalya",
-        date: "2019",
+        jobtitle: "Senior QA Automation",
+        where: "SOVOS",
+        date: "2023",
     },
     {
-        jobtitle: "Designer of week",
-        where: "ALquds",
-        date: "2019",
+        jobtitle: "QA Lead",
+        where: "Extrimian LLC.",
+        date: "2021",
     },
+    {
+        jobtitle: "QA Engineer",
+        where: "Grupo Sabra",
+        date: "2020"
+    },
+    {
+        jobtitle: "QA Engineer",
+        where: "SOVOS",
+        date: "2018"
+    }
+
 ];
 
 const skills = [{
-        name: "Python",
-        value: 90,
-    },
-    {
-        name: "Djano",
-        value: 85,
-    },
-    {
         name: "Javascript",
-        value: 80,
+        value: 40,
     },
     {
-        name: "React",
-        value: 60,
+        name: "Node.Js",
+        value: 40,
     },
     {
-        name: "Jquery",
-        value: 85,
+        name: "MongoDB",
+        value: 30,
+    },
+    {
+        name: "Sql",
+        value: 30,
+    },
+    {
+        name: "Cypress",
+        value: 70,
+    },
+    {
+        name: "MochaJS",
+        value: 70,
     },
 ];
 
 const services = [{
-        title: "UI & UX Design",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+        title: "Full Stack Developer",
+        description: "with a background on JavaScript, React, NodeJS and MongoDB. Certified on Rolling Code School",
     },
     {
-        title: "Mobile Apps",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
-    },
-    {
-        title: "Wordpress Design",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
-    },
+        title: "QA Automation",
+        description: "4 year of experience working on automation, with Cypress and Mocha in the last years.",
+    }
 ];
 
 const dataportfolio = [{
@@ -136,9 +147,9 @@ const dataportfolio = [{
 ];
 
 const contactConfig = {
-    YOUR_EMAIL: "name@domain.com",
-    YOUR_FONE: "(555)123-4567",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula eu nunc et sollicitudin. Cras pulvinar, nisi at imperdiet pharetra. ",
+    YOUR_EMAIL: "pablogiroud@gmail.com",
+    YOUR_FONE: "+54(385)419-2582",
+    description: "",
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
     YOUR_SERVICE_ID: "service_id",
@@ -147,10 +158,10 @@ const contactConfig = {
 };
 
 const socialprofils = {
-    github: "https://github.com",
-    facebook: "https://facebook.com",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    github: "https://github.com/pablogiroud",
+    facebook: "https://facebook.com/pablogiroud",
+    linkedin: "https://www.linkedin.com/in/pablogiroud/",
+    twitter: "https://twitter.com/pablogiroud",
 };
 export {
     meta,
