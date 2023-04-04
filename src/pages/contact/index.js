@@ -27,20 +27,23 @@ export const ContactUs = () => {
       to_name: contactConfig.YOUR_EMAIL,
       message: formData.message,
     };
+    
+    const { REACT_APP_PUBLIC_KEY } = process.env
 
     emailjs
       .send(
         contactConfig.YOUR_SERVICE_ID,
         contactConfig.YOUR_TEMPLATE_ID,
         templateParams,
-        contactConfig.YOUR_USER_ID
+        REACT_APP_PUBLIC_KEY
+        //contactConfig.YOUR_USER_ID,
       )
       .then(
         (result) => {
           console.log(result.text);
           setFormdata({
             loading: false,
-            alertmessage: "SUCCESS! ,Thankyou for your messege",
+            alertmessage: "Done!, Thankyou for your messege. I'll reply ASAP",
             variant: "success",
             show: true,
           });
@@ -101,9 +104,9 @@ export const ContactUs = () => {
               </a>
               <br />
               <br />
-              {contactConfig.hasOwnProperty("YOUR_FONE") ? (
+              {contactConfig.hasOwnProperty("YOUR_PHONE") ? (
                 <p>
-                  <strong>Phone:</strong> {contactConfig.YOUR_FONE}
+                  <strong>Phone:</strong> {contactConfig.YOUR_PHONE}
                 </p>
               ) : (
                 ""
