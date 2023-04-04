@@ -1,6 +1,6 @@
 {
-    "name": "react-portfolio",
-    "version": "0.1.0",
+    "name": "pablogiroudportfolio",
+    "version": "0.2.0",
     "private": true,
     "dependencies": {
         "bootstrap": "^5.2.3",
