@@ -8,6 +8,9 @@ import { contactConfig } from "../../content_option";
 import ReCAPTCHA from "react-google-recaptcha";
 
 export const ContactUs = () => {
+
+  const [captcha, setCaptcha] = useState();
+
   const [formData, setFormdata] = useState({
     email: "",
     name: "",
@@ -30,7 +33,7 @@ export const ContactUs = () => {
     };
 
     const { REACT_APP_PUBLIC_KEY } = process.env
-  
+
     emailjs
       .send(
         contactConfig.YOUR_SERVICE_ID,
@@ -159,7 +162,7 @@ export const ContactUs = () => {
                     sitekey={process.env.REACT_APP_CAPTCHA_SITE_KEY}
                     onChange={(val) => setCaptcha(val)}
                   />
-                  <button className="btn ac_btn my-3" type="submit">
+                  <button className="btn ac_btn my-3" type="submit" disabled={formData.loading || !captcha}>
                     {formData.loading ? "Sending..." : "Send"}
                   </button>
                 </Col>
