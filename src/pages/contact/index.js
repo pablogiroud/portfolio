@@ -5,6 +5,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export const ContactUs = () => {
   const [formData, setFormdata] = useState({
@@ -27,9 +28,9 @@ export const ContactUs = () => {
       to_name: contactConfig.YOUR_EMAIL,
       message: formData.message,
     };
-    
-    const { REACT_APP_PUBLIC_KEY } = process.env
 
+    const { REACT_APP_PUBLIC_KEY } = process.env
+  
     emailjs
       .send(
         contactConfig.YOUR_SERVICE_ID,
@@ -86,9 +87,8 @@ export const ContactUs = () => {
             <Alert
               //show={formData.show}
               variant={formData.variant}
-              className={`rounded-0 co_alert ${
-                formData.show ? "d-block" : "d-none"
-              }`}
+              className={`rounded-0 co_alert ${formData.show ? "d-block" : "d-none"
+                }`}
               onClose={() => setFormdata({ show: false })}
               dismissible
             >
@@ -155,7 +155,11 @@ export const ContactUs = () => {
               <br />
               <Row>
                 <Col lg="12" className="form-group">
-                  <button className="btn ac_btn" type="submit">
+                  <ReCAPTCHA
+                    sitekey={process.env.REACT_APP_CAPTCHA_SITE_KEY}
+                    onChange={(val) => setCaptcha(val)}
+                  />
+                  <button className="btn ac_btn my-3" type="submit">
                     {formData.loading ? "Sending..." : "Send"}
                   </button>
                 </Col>
