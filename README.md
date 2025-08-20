@@ -31,7 +31,7 @@ Follow these steps to set up and run the project on your local machine.
 ### Prerequisites
 
 *   Node.js (v14 or higher)
-*   npm o yarn
+*   npm or yarn
 
 ### Installation
 
@@ -44,18 +44,17 @@ Follow these steps to set up and run the project on your local machine.
 2.  Install the dependencies:
     ```bash
     npm install
-    # o
+    # or
     yarn install
     ```
 
 3.  **Configure environment variables:**
-    Create a `.env` file in the project root and add the following variables.
-
+    Create a `.env` file in the project root and add the following variables. You can use the `.env.example` file as a template.
     ```
-    REACT_APP_YOUR_SERVICE_ID=your_emailjs_service_id
-    REACT_APP_YOUR_TEMPLATE_ID=your_emailjs_template_id
-    REACT_APP_PUBLIC_KEY=your_emailjs_public_key
-    REACT_APP_CAPTCHA_SITE_KEY=your_google_recaptcha_site_key
+    REACT_APP_YOUR_SERVICE_ID=
+    REACT_APP_YOUR_TEMPLATE_ID=
+    REACT_APP_PUBLIC_KEY=
+    REACT_APP_CAPTCHA_SITE_KEY=
     ```
     *   Get your credentials from EmailJS.
     *   Get your Site Key from Google reCAPTCHA.
@@ -89,3 +88,4 @@ Pablo Giroud - pablogiroud@gmail.com
 
 Project Link: https://github.com/pablogiroud/portfolio
 
+---
