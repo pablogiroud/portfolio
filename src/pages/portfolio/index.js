@@ -25,7 +25,7 @@ export const Portfolio = () => {
             return (
               <div key={i} className="po_item">
                 {/* Usamos la URL del servicio de capturas en lugar de data.img */}
-                <img src={screenshotServiceUrl} alt={`Captura de pantalla del proyecto ${data.description}`} />
+                <img src={screenshotServiceUrl} alt={`Project screenshot ${data.description}`} />
                 <div className="content">
                   <p className="p-3">{data.description}</p>
                   <a target="_blank" rel="noreferrer" href={data.link}>view project</a>
