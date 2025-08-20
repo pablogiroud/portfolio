@@ -1,4 +1,3 @@
-import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
@@ -21,12 +20,15 @@ export const Portfolio = () => {
         </Row>
         <div className="mb-5 po_items_ho">
           {dataportfolio.map((data, i) => {
+            // Construimos la URL para el servicio de capturas de pantalla.
+            const screenshotServiceUrl = `https://image.thum.io/get/width/1024/crop/1024/${data.link}`;
             return (
               <div key={i} className="po_item">
-                <img src={data.img} alt="" />
+                {/* Usamos la URL del servicio de capturas en lugar de data.img */}
+                <img src={screenshotServiceUrl} alt={`Project screenshot ${data.description}`} />
                 <div className="content">
-                  <p>{data.description}</p>
-                  <a href={data.link}>view project</a>
+                  <p className="p-3">{data.description}</p>
+                  <a target="_blank" rel="noreferrer" href={data.link}>view project</a>
                 </div>
               </div>
             );

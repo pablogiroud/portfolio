@@ -7,9 +7,9 @@ const meta = {
 const introdata = {
     title: "I’m Pablo Giroud",
     animated: {
-        first: "I love coding",
-        second: "I'm Full stack developer",
-        third: "and senior QA Automation",
+        first: "senior QA Automation",
+        second: "and Full stack developer",
+        // third: "and senior QA Automation",
     },
     description: "Senior QA Automation at SOVOS",
     your_img_url: "https://images.unsplash.com/photo-1514790193030-c89d266d5a9d",
@@ -17,7 +17,7 @@ const introdata = {
 
 const dataabout = {
     title: "a bit about my self",
-    aboutme: "Nature & music and pets lover. Coding for fun, working with passion.",
+    aboutme: "Nature & music. Pet lover. I love to learn new things, and I am always looking for new challenges. I am passionate about technology and how it can be used to improve our lives.",
 };
 const worktimeline = [{
         jobtitle: "Full Stack Developer",
@@ -49,7 +49,7 @@ const worktimeline = [{
 
 const skills = [{
         name: "Javascript",
-        value: 40,
+        value: 50,
     },
     {
         name: "Node.Js",
@@ -71,6 +71,14 @@ const skills = [{
         name: "MochaJS",
         value: 70,
     },
+    {
+        name: "JMeter",
+        value: 60,
+    },
+    {
+        name: "GIT",
+        value: 70,
+    },
 ];
 
 const services = [{
@@ -79,71 +87,35 @@ const services = [{
     },
     {
         title: "QA Automation",
-        description: "4 year of experience working on automation, with Cypress and Mocha in the last years.",
+        description: "Experience working on automation, with Cypress, Mocha and JMeter.",
     }
 ];
 
 const dataportfolio = [{
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
+        img: "../assets/images/joledezma.webp",
+        description: "Photographer portfolio",
+        link: "https://joledezmafotografias.com.ar/",
     },
     {
-        img: "https://picsum.photos/400/800/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
+        img: "./assets/images/patomolina.webp",
+        description: "Musician and composer porfolio.",
+        link: "https://patomolina.netlify.app/",
     },
     {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
+        img: "./assets/images/itsalive.webp",
+        description: "A little flaky app to test how to handle sparql queries.",
+        link: "https://itsalive.netlify.app/",
     },
     {
-        img: "https://picsum.photos/400/600/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/300/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/700/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-
-    {
-        img: "https://picsum.photos/400/600/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/300/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/550/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/700/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
+        img: "./assets/images/simpleresume.webp",
+        description: "A simple resume builder in process. This is a personal project that includes a front with react and a backend with node.js, sorting data with mongodb.",
+        link: "https://simplifyresume.netlify.app/home",
+    }
+    // {
+    //     img: "https://picsum.photos/400/300/?grayscale",
+    //     description: "The wisdom of life consists in the elimination of non-essentials.",
+    //     link: "#",
+    // }
 ];
 
 const contactConfig = {
