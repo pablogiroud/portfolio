@@ -6,6 +6,8 @@ import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
 import ReCAPTCHA from "react-google-recaptcha";
+const { REACT_APP_PUBLIC_KEY } = process.env
+const { REACT_APP_CAPTCHA_SITE_KEY } = process.env;
 
 export const ContactUs = () => {
 
@@ -36,7 +38,7 @@ export const ContactUs = () => {
         contactConfig.YOUR_SERVICE_ID,
         contactConfig.YOUR_TEMPLATE_ID,
         templateParams,
-        contactConfig.PUBLIC_KEY
+        REACT_APP_PUBLIC_KEY
         //contactConfig.YOUR_USER_ID,
       )
       .then(
@@ -156,7 +158,7 @@ export const ContactUs = () => {
               <Row>
                 <Col lg="12" className="form-group">
                   <ReCAPTCHA
-                    sitekey={contactConfig.CAPTCHA_KEY}
+                    sitekey={REACT_APP_CAPTCHA_SITE_KEY}
                     onChange={(val) => setCaptcha(val)}
                   />
                   <button className="btn ac_btn my-3" type="submit" disabled={formData.loading || !captcha}>
