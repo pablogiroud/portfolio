@@ -126,6 +126,8 @@ const contactConfig = {
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
     YOUR_SERVICE_ID: process.env.REACT_APP_YOUR_SERVICE_ID,
     YOUR_TEMPLATE_ID: process.env.REACT_APP_YOUR_TEMPLATE_ID,
+    PUBLIC_KEY: process.env.REACT_APP_PUBLIC_KEY,
+    CAPTCHA_KEY: process.env.REACT_APP_CAPTCHA_SITE_KEY,
 };
 
 const socialprofils = {
