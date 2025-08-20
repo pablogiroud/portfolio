@@ -49,13 +49,8 @@ Follow these steps to set up and run the project on your local machine.
     ```
 
 3.  **Configure environment variables:**
-    Create a `.env` file in the project root and add the following variables. You can use the `.env.example` file as a template.
-    ```
-    REACT_APP_YOUR_SERVICE_ID=
-    REACT_APP_YOUR_TEMPLATE_ID=
-    REACT_APP_PUBLIC_KEY=
-    REACT_APP_CAPTCHA_SITE_KEY=
-    ```
+    Create a `.env` file in the project root and add the following variables: look in the project for REACT_...
+    
     *   Get your credentials from EmailJS.
     *   Get your Site Key from Google reCAPTCHA.
 
