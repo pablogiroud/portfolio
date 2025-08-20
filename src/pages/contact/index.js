@@ -7,6 +7,7 @@ import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
 import ReCAPTCHA from "react-google-recaptcha";
 const { REACT_APP_CAPTCHA_SITE_KEY } = process.env;
+const { REACT_APP_PUBLIC_KEY } = process.env
 
 export const ContactUs = () => {
 
@@ -31,8 +32,6 @@ export const ContactUs = () => {
       to_name: contactConfig.YOUR_EMAIL,
       message: formData.message,
     };
-
-    const { REACT_APP_PUBLIC_KEY } = process.env
 
     emailjs
       .send(
