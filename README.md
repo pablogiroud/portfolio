@@ -1,90 +1,91 @@
-# Portafolio Personal con React
+# Personal Portfolio with React
 
-Este es un portafolio personal dinámico y moderno, creado con React para mostrar mis proyectos, habilidades y experiencia profesional.
+This is a dynamic and modern personal portfolio, created with React to showcase my projects, skills, and professional experience.
 
-![Captura de pantalla del Portafolio](./src/assets/images/portfolio-screenshot.png)
+![Portfolio Screenshot](./src/assets/images/portfolio-screenshot.png)
 
-## ✨ Características
+## ✨ Features
 
-*   **Single Page Application (SPA):** Construido con React y React Router para una navegación fluida sin recargar la página.
-*   **Diseño Responsivo:** Adaptable a diferentes tamaños de pantalla, desde móviles hasta escritorios.
-*   **Secciones Claras:** Incluye secciones de Inicio, Sobre Mí, Portafolio y Contacto.
-*   **Portafolio Dinámico:** Las vistas previas de los proyectos se generan automáticamente a partir de los enlaces, utilizando el servicio thum.io.
-*   **Cambio de Tema:** Permite cambiar entre un tema claro y uno oscuro.
-*   **Formulario de Contacto Funcional:** Integrado con EmailJS y Google reCAPTCHA para recibir mensajes de forma segura.
+*   **Single Page Application (SPA):** Built with React and React Router for a smooth, no-reload navigation experience.
+*   **Responsive Design:** Adaptable to different screen sizes, from mobile to desktop.
+*   **Clear Sections:** Includes Home, About Me, Portfolio, and Contact sections.
+*   **Dynamic Portfolio:** Project previews are automatically generated from their links using the thum.io service.
+*   **Theme Switcher:** Allows switching between a light and dark theme.
+*   **Functional Contact Form:** Integrated with EmailJS and Google reCAPTCHA to securely receive messages.
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠️ Technologies Used
 
 *   **Frontend:** React, HTML5, CSS3
-*   **Enrutamiento:** React Router DOM
-*   **Componentes UI:** React Bootstrap
-*   **Iconos:** React Icons
-*   **Envío de Formularios:** EmailJS
-*   **Seguridad:** Google reCAPTCHA
-*   **Despliegue:** Netlify
+*   **Routing:** React Router DOM
+*   **UI Components:** React Bootstrap
+*   **Icons:** React Icons
+*   **Form Submission:** EmailJS
+*   **Security:** Google reCAPTCHA
+*   **Deployment:** Netlify
+*   **Domain:** nic.ar
 
-## 🚀 Cómo Empezar
+## 🚀 Getting Started
 
-Sigue estos pasos para configurar y ejecutar el proyecto en tu máquina local.
+Follow these steps to set up and run the project on your local machine.
 
-### Prerrequisitos
+### Prerequisites
 
-*   Node.js (v14 o superior)
+*   Node.js (v14 or higher)
 *   npm o yarn
 
-### Instalación
+### Installation
 
-1.  Clona el repositorio:
+1.  Clone the repository:
     ```bash
     git clone https://github.com/pablogiroud/portfolio.git
     cd portfolio
     ```
 
-2.  Instala las dependencias:
+2.  Install the dependencies:
     ```bash
     npm install
     # o
     yarn install
     ```
 
-3.  **Configurar variables de entorno:**
-    Crea un archivo `.env` en la raíz del proyecto y añade las siguientes variables. Puedes usar el archivo `.env.example` como plantilla.
+3.  **Configure environment variables:**
+    Create a `.env` file in the project root and add the following variables.
 
     ```
-    REACT_APP_YOUR_SERVICE_ID=tu_service_id_de_emailjs
-    REACT_APP_YOUR_TEMPLATE_ID=tu_template_id_de_emailjs
-    REACT_APP_PUBLIC_KEY=tu_public_key_de_emailjs
-    REACT_APP_CAPTCHA_SITE_KEY=tu_site_key_de_google_recaptcha
+    REACT_APP_YOUR_SERVICE_ID=your_emailjs_service_id
+    REACT_APP_YOUR_TEMPLATE_ID=your_emailjs_template_id
+    REACT_APP_PUBLIC_KEY=your_emailjs_public_key
+    REACT_APP_CAPTCHA_SITE_KEY=your_google_recaptcha_site_key
     ```
-    *   Obtén tus credenciales de EmailJS.
-    *   Obtén tu Site Key de Google reCAPTCHA.
+    *   Get your credentials from EmailJS.
+    *   Get your Site Key from Google reCAPTCHA.
 
-### Ejecución
+### Running the project
 
-*   **Para desarrollo:**
+*   **For development:**
     ```bash
     npm start
     ```
-    Abre http://localhost:3000 en tu navegador.
+    Opens http://localhost:3000 in your browser.
 
-*   **Para producción:**
+*   **For production:**
     ```bash
     npm run build
     ```
-    Esto creará una carpeta `build` con los archivos estáticos listos para desplegar.
+    This will create a `build` folder with the static files ready for deployment.
 
-## 🔧 Personalización
+## 🔧 Customization
 
-La mayor parte del contenido del sitio (textos, enlaces a redes sociales, proyectos del portafolio, etc.) se puede modificar fácilmente editando el archivo:
+Most of the site's content (texts, social media links, portfolio projects, etc.) can be easily modified by editing the file:
 `src/content_option.js`
 
-## 📄 Licencia
+## 📄 License
 
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+This project is under the MIT License. See the `LICENSE` file for more details.
 
-## 📬 Contacto
+## 📬 Contact
 
 Pablo Giroud - pablogiroud@gmail.com
 
-Enlace del Proyecto: https://github.com/pablogiroud/portfolio
+Project Link: https://github.com/pablogiroud/portfolio
 
