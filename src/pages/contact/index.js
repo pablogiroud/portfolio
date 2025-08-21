@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import * as emailjs from "emailjs-com";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
@@ -39,8 +39,6 @@ export const ContactUs = () => {
         contactConfig.YOUR_TEMPLATE_ID,
         templateParams,
         PUBLIC_KEY
-    
-        //contactConfig.YOUR_USER_ID,
       )
       .then(
         (result) => {
@@ -159,7 +157,7 @@ export const ContactUs = () => {
               <Row>
                 <Col lg="12" className="form-group">
                   <ReCAPTCHA
-                    sitekey={process.env.REACT_APP_CAPTCHA_SITE_KEY}
+                    data-sitekey={process.env.REACT_APP_CAPTCHA_SITE_KEY}
                     onChange={(val) => setCaptcha(val)}
                   />
                   <button className="btn ac_btn my-3" type="submit" disabled={formData.loading || !captcha}>
