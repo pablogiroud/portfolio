@@ -165,6 +165,7 @@ export const ContactUs = () => {
                   <ReCAPTCHA
                     className="g-recaptcha"
                     sitekey={contactConfig.CAPTCHA_KEY}
+                    ref={recaptchaRef}
                     onChange={(val) => setCaptcha(val)}
                   />
                   <button className="btn ac_btn my-3" type="submit" disabled={formData.loading || !captcha}>
