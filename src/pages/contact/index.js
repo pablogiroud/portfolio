@@ -31,14 +31,12 @@ export const ContactUs = () => {
       message: formData.message,
     };
 
-    const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY
-
     emailjs
       .send(
         contactConfig.YOUR_SERVICE_ID,
         contactConfig.YOUR_TEMPLATE_ID,
         templateParams,
-        PUBLIC_KEY
+        contactConfig.PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -157,7 +155,8 @@ export const ContactUs = () => {
               <Row>
                 <Col lg="12" className="form-group">
                   <ReCAPTCHA
-                    data-sitekey={process.env.REACT_APP_CAPTCHA_SITE_KEY}
+                    className="g-recaptcha"
+                    sitekey={contactConfig.CAPTCHA_KEY}
                     onChange={(val) => setCaptcha(val)}
                   />
                   <button className="btn ac_btn my-3" type="submit" disabled={formData.loading || !captcha}>
