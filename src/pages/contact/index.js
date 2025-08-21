@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import * as emailjs from "emailjs-com";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
@@ -7,8 +7,10 @@ import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
 import ReCAPTCHA from "react-google-recaptcha";
 
+
 export const ContactUs = () => {
 
+  const recaptchaRef = useRef();
   const [captcha, setCaptcha] = useState();
   const [formData, setFormdata] = useState({
     email: "",
@@ -23,6 +25,12 @@ export const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormdata({ loading: true });
+    const token = recaptchaRef.current.getValue();
+    
+    if (!token) {
+      alert("Please complete the reCAPTCHA");
+      return;
+    }
 
     const templateParams = {
       from_name: formData.email,
@@ -51,7 +59,7 @@ export const ContactUs = () => {
         (error) => {
           console.log(error.text);
           setFormdata({
-            alertmessage: `Faild to send!,${error.text}`,
+            alertmessage: `Failed to send!,${error.text}`,
             variant: "danger",
             show: true,
           });
