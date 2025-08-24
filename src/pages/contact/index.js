@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import * as emailjs from "emailjs-com";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
@@ -9,9 +9,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 
 export const ContactUs = () => {
-
-  const recaptchaRef = useRef();
-  const [captcha, setCaptcha] = useState();
+  const [captcha, setCaptcha] = useState(null);
   const [formData, setFormdata] = useState({
     email: "",
     name: "",
@@ -24,19 +22,19 @@ export const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormdata({ loading: true });
-    const token = recaptchaRef.current.getValue();
-    
-    if (!token) {
+    if (!captcha) {
       alert("Please complete the reCAPTCHA");
       return;
     }
+
+    setFormdata((prev) => ({ ...prev, loading: true }));
 
     const templateParams = {
       from_name: formData.email,
       user_name: formData.name,
       to_name: contactConfig.YOUR_EMAIL,
       message: formData.message,
+      "g-recaptcha-response": captcha,
     };
 
     emailjs
@@ -49,30 +47,33 @@ export const ContactUs = () => {
       .then(
         (result) => {
           console.log(result.text);
-          setFormdata({
+          setFormdata(prev => ({
+            ...prev,
             loading: false,
             alertmessage: "Done!, Thankyou for your messege. I'll reply ASAP",
             variant: "success",
             show: true,
-          });
+          }));
         },
         (error) => {
           console.log(error.text);
-          setFormdata({
-            alertmessage: `Failed to send!,${error.text}`,
+          setFormdata((prev) => ({
+            ...prev,
+            loading: false,
+            alertmessage: `Failed to send!, ${error.text}`,
             variant: "danger",
             show: true,
-          });
+          }));
           document.getElementsByClassName("co_alert")[0].scrollIntoView();
         }
       );
   };
 
   const handleChange = (e) => {
-    setFormdata({
-      ...formData,
+    setFormdata((prev) => ({
+      ...prev,
       [e.target.name]: e.target.value,
-    });
+    }));
   };
 
   return (
@@ -165,7 +166,6 @@ export const ContactUs = () => {
                   <ReCAPTCHA
                     className="g-recaptcha"
                     sitekey={contactConfig.CAPTCHA_KEY}
-                    ref={recaptchaRef}
                     onChange={(val) => setCaptcha(val)}
                   />
                   <button className="btn ac_btn my-3" type="submit" disabled={formData.loading || !captcha}>
